@@ -1,0 +1,55 @@
+CREATE TABLE `college`.`students` (
+ `name` VARCHAR(100) NOT NULL,
+ `id` INT NOT NULL AUTO_INCREMENT,
+ `phone_number` INT(20) NOT NULL,
+ `email_id` VARCHAR(45) NOT NULL,
+ `age` INT NOT NULL,
+ PRIMARY KEY (`id`));
+
+
+insert into students(`name`,`phone_number`,`email_id`,`age`) values ("ramya",9533322273,"ramyasri.kurapati@gmail.com",21),("deepu",9010263991,"deepu@gmail.com",22); 
+ 
+ 
+
+select * from students;
+ desc students;
+ 
+ 
+ desc students;
+
+
+use college;
+
+ 
+
+CREATE TABLE course (id int, coursetype varchar(30), coursename varchar(30));
+
+
+insert into course values(1, "parttime","c"),(2, "fulltime", "sql");
+ 
+
+create table marks(id int, studentid varchar(20), courseid varchar(20), marks int(100),grades varchar(5));
+
+
+insert into marks values(1,1,2,60,"A"),(2,2,2,70,"A"),(3,1,1,50,"D"),(4,2,1,25,"C");
+ 
+
+insert into marks values(5,3,3,50,"B");
+ 
+
+select * from students;
+ 
+select * from course;
+ 
+select * from marks;
+ 
+select name from students where name = "ramya";
+ 
+select studentid from marks where marks>30;
+ 
+select * from marks where marks>30 GROUP BY courseid having marks<60;
+ 
+select * from students order by name asc;
+ 
+ 
+ 
